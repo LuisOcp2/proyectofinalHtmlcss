@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buscar Perfumes - Essence</title>
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/busqueda.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>Essence</h1>
+        <p>Tu Perfumería Online</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="registro.html">Registrar Producto</a></li>
+          <li><a href="busqueda.html" class="active">Buscar</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="busqueda-header">
+        <h2>Buscador de Perfumes</h2>
+        <p>
+          Utiliza los filtros para encontrar perfumes específicos en nuestro
+          catálogo
+        </p>
+      </section>
+
+      <section class="filtros-container">
+        <div class="filtro">
+          <label for="buscarNombre">Nombre:</label>
+          <input
+            type="text"
+            id="buscarNombre"
+            placeholder="Buscar por nombre"
+          />
+        </div>
+
+        <div class="filtro">
+          <label for="buscarCategoria">Categoría:</label>
+          <select id="buscarCategoria">
+            <option value="">Todas las categorías</option>
+            <option value="Floral">Floral</option>
+            <option value="Cítrico">Cítrico</option>
+            <option value="Oriental">Oriental</option>
+            <option value="Amaderado">Amaderado</option>
+            <option value="Fresco">Fresco</option>
+          </select>
+        </div>
+
+        <div class="filtro">
+          <label for="buscarPrecioMax">Precio máximo:</label>
+          <input
+            type="number"
+            id="buscarPrecioMax"
+            placeholder="Precio máximo"
+          />
+        </div>
+
+        <div class="botones-filtro">
+          <button id="btnBuscar">Buscar</button>
+          <button id="btnLimpiarFiltros">Limpiar Filtros</button>
+        </div>
+      </section>
+
+      <div
+        id="loadingIndicator"
+        class="loading-container"
+        style="display: none"
+      >
+        <div class="loader"></div>
+        <p>Cargando resultados...</p>
+      </div>
+
+      <section class="resultados-container">
+        <table id="tablaResultados">
+          <thead>
+            <tr>
+              <th>Imagen</th>
+              <th>Nombre</th>
+              <th>Categoría</th>
+              <th>Precio</th>
+              <th>Volumen</th>
+              <th>Intensidad</th>
+            </tr>
+          </thead>
+          <tbody id="resultadosBody">
+            <!-- Los resultados se cargarán dinámicamente con JavaScript -->
+          </tbody>
+        </table>
+
+        <div class="mensaje-resultados" id="mensajeResultados">
+          Utilice los filtros para buscar productos
+        </div>
+
+        <div class="paginacion-resultados">
+          <button id="btnAnteriorResultados" disabled>Página Anterior</button>
+          <span id="paginaActualResultados">Página 1</span>
+          <button id="btnSiguienteResultados" disabled>Página Siguiente</button>
+        </div>
+
+        <div class="acciones-resultados">
+          <a href="productos.html" class="btn-accion">Regresar a Productos</a>
+          <button id="btnLimpiarBusqueda" class="btn-accion">
+            Limpiar Búsqueda
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2025 Essence - Tu Perfumería Online. Todos los derechos
+        reservados.
+      </p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/busqueda.js"></script>
+  </body>
+</html>

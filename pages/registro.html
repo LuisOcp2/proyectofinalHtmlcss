@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Productos - Essence</title>
+    <link rel="stylesheet" href="../css/registro.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>Essence</h1>
+        <p>Tu Perfumería Online</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="registro.html" class="active">Registrar Producto</a></li>
+          <li><a href="busqueda.html">Buscar</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="registro-container">
+        <h2>Registro de Nuevo Perfume</h2>
+        <p class="descripcion">
+          Complete todos los campos del formulario para registrar un nuevo
+          perfume en nuestro sistema.
+        </p>
+
+        <form id="registroForm">
+          <div class="form-group">
+            <label for="nombre"
+              >Nombre del Perfume <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              maxlength="20"
+              required
+            />
+            <small>Máximo 20 caracteres</small>
+          </div>
+
+          <div class="form-group">
+            <label for="categoria"
+              >Categoría <span class="required">*</span></label
+            >
+            <select id="categoria" name="categoria" required>
+              <option value="">Seleccione una categoría</option>
+              <option value="Floral">Floral</option>
+              <option value="Cítrico">Cítrico</option>
+              <option value="Oriental">Oriental</option>
+              <option value="Amaderado">Amaderado</option>
+              <option value="Fresco">Fresco</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="imagen">Imagen <span class="required">*</span></label>
+            <select id="imagen" name="imagen" required>
+              <option value="">Seleccione una imagen</option>
+              <option value="perfume1.jpg">Perfume Clásico</option>
+              <option value="perfume2.jpg">Perfume Moderno</option>
+              <option value="perfume3.jpg">Perfume Elegante</option>
+              <option value="perfume4.jpg">Perfume Juvenil</option>
+              <option value="perfume5.jpg">Perfume Sofisticado</option>
+              <option value="perfume6.jpg">Perfume Fresco</option>
+              <option value="perfume7.jpg">Perfume Floral</option>
+              <option value="perfume8.jpg">Perfume Oriental</option>
+              <option value="perfume9.jpg">Perfume Cítrico</option>
+              <option value="perfume10.jpg">Perfume Amaderado</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="codigo"
+              >Código de Producto <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="codigo"
+              name="codigo"
+              minlength="8"
+              required
+            />
+            <small
+              >Mínimo 8 caracteres, al menos una minúscula, una mayúscula y 2
+              números</small
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="precio"
+              >Precio (COP) <span class="required">*</span></label
+            >
+            <input
+              type="number"
+              id="precio"
+              name="precio"
+              min="1000"
+              required
+            />
+            <small>Solo números, sin puntos ni comas</small>
+          </div>
+
+          <div class="form-group">
+            <label for="volumen"
+              >Volumen (ml) <span class="required">*</span></label
+            >
+            <input type="number" id="volumen" name="volumen" min="1" required />
+            <small>Indicar el volumen en mililitros</small>
+          </div>
+
+          <div class="form-group">
+            <label for="intensidad"
+              >Intensidad <span class="required">*</span></label
+            >
+            <select id="intensidad" name="intensidad" required>
+              <option value="">Seleccione la intensidad</option>
+              <option value="Baja">Baja</option>
+              <option value="Media-Baja">Media-Baja</option>
+              <option value="Media">Media</option>
+              <option value="Media-Alta">Media-Alta</option>
+              <option value="Alta">Alta</option>
+            </select>
+          </div>
+
+          <div class="botones">
+            <button type="submit" id="btnRegistrar">Registrar Producto</button>
+            <button type="button" id="btnLimpiar">Limpiar Campos</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2025 Essence - Tu Perfumería Online. Todos los derechos
+        reservados.
+      </p>
+    </footer>
+
+    <script src="../js/data.js"></script>
+    <script src="../js/registro.js"></script>
+  </body>
+</html>

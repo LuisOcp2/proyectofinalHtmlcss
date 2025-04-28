@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo de Perfumes - Essence</title>
+    <link rel="stylesheet" href="../css/productos.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>Essence</h1>
+        <p>Tu Perfumería Online</p>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="productos.html" class="active">Productos</a></li>
+          <li><a href="registro.html">Registrar Producto</a></li>
+          <li><a href="busqueda.html">Buscar</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="productos-header">
+        <h2>Catálogo de Perfumes</h2>
+        <div class="acciones">
+          <a href="registro.html" class="btn-accion"
+            >Registrar Nuevo Producto</a
+          >
+          <a href="busqueda.html" class="btn-accion">Buscar Producto</a>
+        </div>
+      </section>
+
+      <section class="productos-container" id="productosContainer">
+        <!-- Los productos se cargarán dinámicamente con JavaScript -->
+      </section>
+
+      <section class="paginacion">
+        <button id="btnAnterior" disabled>Página Anterior</button>
+        <span id="paginaActual">Página 1</span>
+        <button id="btnSiguiente">Página Siguiente</button>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2025 Essence - Tu Perfumería Online. Todos los derechos
+        reservados.
+      </p>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/productos.js"></script>
+  </body>
+</html>

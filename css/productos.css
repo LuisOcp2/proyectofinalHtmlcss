@@ -1,0 +1,108 @@
+.productos-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.productos-header h2 {
+  margin-bottom: 15px;
+}
+.acciones {
+  display: flex;
+  gap: 15px;
+}
+.btn-accion {
+  padding: 10px 20px;
+}
+.productos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  margin-bottom: 30px;
+}
+.producto-card {
+  background-color: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: var(--transition);
+  border: 1px solid var(--color-border);
+}
+.producto-card {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.producto-imagen {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-bottom: 1px solid var(--color-border);
+}
+.producto-info {
+  padding: 15px;
+}
+.producto-nombre {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+.producto-categoria {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+.producto-detalle {
+  margin-bottom: 5px;
+  color: var(--color-text);
+}
+.producto-detalle strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+.producto-precio {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-top: 10px;
+}
+.paginacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+.paginacion button {
+  min-width: 140px;
+}
+#paginaActual {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  padding: 8px 15px;
+  border-radius: var(--radius);
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .productos-container {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+@media (max-width: 480px) {
+  .productos-container {
+    grid-template-columns: 1fr;
+  }
+  .acciones {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-accion {
+    width: 100%;
+    text-align: center;
+  }
+}
